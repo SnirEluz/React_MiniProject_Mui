@@ -1,0 +1,42 @@
+-------------------------Todo------------------------
+1. Generate Components:
+    - Header
+    - Main
+      -> Coins
+        -> CoinCard
+      -> About
+      -> Favorite
+      -> 404 (Page not found)
+
+2. Routing:
+    / ==> coinComp
+    / About ==> aboutComp
+    / Favorite ==> favoriteComp
+    / Not Exist Url ==> 404Comp
+3. Data Layer:
+    - App:
+       state: coinsArr, favArr
+       function: getCoinsFromApi(), addToFavorite(id), delFromFavorite(id)
+       jsx: <Header />, <Drawer {} />, <Main
+                                          prop={ coinsArr, favArr
+                                          addToFavorite(), delFromFavorite() }/>
+
+--------------------------✅-------------------------
+    - Main:
+       props: coinsArr, favArr, addToFavorite(id), delFromFavorite(id)
+       jsx: <Router > Routes > Route  />, <coinCard />
+
+    - Coins:
+       props: coinsArr, addToFavorite(id), delFromFavorite(id)
+       jsx: map over coinsArr and render <coinCard props={
+                                            coin,
+                                            addToFavorit()
+                                            delFromFavorite() } /> for each coin
+
+    - coinCard:
+       props: coin, addToFavorite(id), delFromFavorite(id)
+       jsx: <Paper />, <Swithch />
+
+
+
+
